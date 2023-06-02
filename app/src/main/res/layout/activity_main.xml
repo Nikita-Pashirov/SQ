@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/bg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bf_of_main_screen" />
+
+    <ImageView
+        android:id="@+id/station1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.943" />
+
+    <ImageView
+        android:id="@+id/station2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toTopOf="@+id/station1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/station3"
+        app:layout_constraintVertical_bias="0.333" />
+
+    <ImageView
+        android:id="@+id/station3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toTopOf="@+id/station1"
+        app:layout_constraintEnd_toEndOf="@+id/station1"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/station1" />
+
+    <ImageView
+        android:id="@+id/station4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/station3"
+        app:layout_constraintEnd_toEndOf="@+id/station2"
+        app:layout_constraintStart_toStartOf="@+id/station2"
+        app:layout_constraintTop_toBottomOf="@+id/station5"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"/>
+
+    <ImageView
+        android:id="@+id/station5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toTopOf="@+id/station3"
+        app:layout_constraintEnd_toEndOf="@+id/station3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/station3" />
+
+    <ImageView
+        android:id="@+id/station6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toTopOf="@+id/station5"
+        app:layout_constraintEnd_toEndOf="@+id/station2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/station2"
+        app:layout_constraintTop_toBottomOf="@+id/station7" />
+
+    <ImageView
+        android:id="@+id/station7"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/unknown"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toTopOf="@+id/station5"
+        app:layout_constraintStart_toStartOf="@+id/station5" />
+
+    <ImageView
+        android:id="@+id/task_11"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/station1"
+        app:layout_constraintStart_toEndOf="@+id/station1"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"/>
+
+    <ImageView
+        android:id="@+id/task_12"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_11"
+        app:layout_constraintEnd_toStartOf="@+id/task_13"
+        app:layout_constraintStart_toEndOf="@+id/task_11"
+        app:layout_constraintTop_toTopOf="@+id/task_13"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown" />
+
+    <ImageView
+        android:id="@+id/task_13"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/station2"
+        app:layout_constraintTop_toTopOf="@+id/station2"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_21"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/station2"
+        app:layout_constraintEnd_toStartOf="@+id/station2"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown" />
+
+    <ImageView
+        android:id="@+id/task_23"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toEndOf="@+id/station3"
+        app:layout_constraintTop_toTopOf="@+id/station3"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_22"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_21"
+        app:layout_constraintEnd_toStartOf="@+id/task_21"
+        app:layout_constraintStart_toEndOf="@+id/task_23"
+        app:layout_constraintTop_toTopOf="@+id/task_23"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_31"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/station3"
+        app:layout_constraintStart_toEndOf="@+id/station3"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_33"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/station4"
+        app:layout_constraintTop_toTopOf="@+id/station4"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_32"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_31"
+        app:layout_constraintEnd_toStartOf="@+id/task_33"
+        app:layout_constraintStart_toEndOf="@+id/task_31"
+        app:layout_constraintTop_toTopOf="@+id/task_33"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_51"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/station5"
+        app:layout_constraintStart_toEndOf="@+id/station5"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_53"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/station6"
+        app:layout_constraintTop_toTopOf="@+id/station6"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_52"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_51"
+        app:layout_constraintEnd_toStartOf="@+id/task_53"
+        app:layout_constraintStart_toEndOf="@+id/task_51"
+        app:layout_constraintTop_toTopOf="@+id/task_53"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+/>
+
+    <ImageView
+        android:id="@+id/task_43"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="45dp"
+        app:layout_constraintStart_toEndOf="@+id/station5"
+        android:onClick="onStationClick"
+        app:layout_constraintTop_toTopOf="@+id/station5"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_41"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="45dp"
+        android:onClick="onStationClick"
+        app:layout_constraintBottom_toBottomOf="@+id/station4"
+        app:layout_constraintEnd_toStartOf="@+id/station4"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_42"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_41"
+        app:layout_constraintEnd_toStartOf="@+id/task_41"
+        app:layout_constraintStart_toEndOf="@+id/task_43"
+        app:layout_constraintTop_toTopOf="@+id/task_43"
+        android:onClick="onStationClick"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_61"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="45dp"
+        app:layout_constraintBottom_toBottomOf="@+id/station6"
+        android:onClick="onStationClick"
+        app:layout_constraintEnd_toStartOf="@+id/station6"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_63"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:onClick="onStationClick"
+        android:layout_marginTop="75dp"
+        app:layout_constraintStart_toEndOf="@+id/station7"
+        app:layout_constraintTop_toTopOf="@+id/station7"
+        android:background="@drawable/unknown"
+        />
+
+    <ImageView
+        android:id="@+id/task_62"
+        android:layout_width="40dp"
+        android:onClick="onStationClick"
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_63"
+        app:layout_constraintEnd_toStartOf="@+id/task_61"
+        app:layout_constraintStart_toEndOf="@+id/task_63"
+        app:layout_constraintTop_toTopOf="@+id/task_61"
+        android:background="@drawable/unknown"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
