@@ -30,8 +30,8 @@ public class Task extends AppCompatActivity {
             }
         });
         task_text = findViewById(R.id.task_text);
-
         int which_task = getIntent().getIntExtra("task", 1);
+        //Switch_case with tasks
         switch (which_task) {
             case 1:
                 task_text.setText(R.string.task11);
@@ -233,18 +233,21 @@ public class Task extends AppCompatActivity {
                 break;
         };
     }
+    //Checking on Ans button pressing
     public void onAnsClick(View v) {
         if (ans1.getId() == v.getId())
             correctPressed();
         else
             uncorrectPressed();
     }
+    //Checking on Back button pressing
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Task.this, MainActivity.class);
         startActivity(intent);
         finish();
     }
+    //Calculate helping variables
     void colculateState () {
         int which_task = getIntent().getIntExtra("task", 1);
         if (Tools.TASKS[which_task] == false) {
@@ -289,6 +292,7 @@ public class Task extends AppCompatActivity {
         }
 
     }
+    //Checking if uncorrect ans pressed
     void uncorrectPressed() {
         SharedPreferences savedData = getSharedPreferences("SavedData", MODE_PRIVATE);
         SharedPreferences.Editor editor = savedData.edit();
@@ -312,6 +316,7 @@ public class Task extends AppCompatActivity {
         Tools.STATIONS[Tools.NEXT_STATION / 10 - 1] = false;
         onBackPressed();
     }
+    //Checking if correct ans pressed
     void correctPressed() {
         Toast.makeText(this, "Поздравляю! Вы дали верный ответ!", Toast.LENGTH_SHORT).show();
         colculateState();

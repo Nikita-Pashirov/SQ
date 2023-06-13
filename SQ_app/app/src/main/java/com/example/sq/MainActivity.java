@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Loading SharedPreferences Data
         if (!Tools.LOAD) {
             SharedPreferences savedData = getSharedPreferences("SavedData", MODE_PRIVATE);
             Tools.NEXT_STATION = savedData.getInt("nextStation", Tools.NEXT_STATION);
@@ -158,6 +159,7 @@ public class MainActivity extends AppCompatActivity {
             task_11.setBackgroundResource(R.drawable.task);
         }
     }
+    //Checking on Station's button pressing to choose one of the stations or task
     public void onStationClick(View view) {
         Intent intent;
         switch (view.getId()) {
@@ -363,7 +365,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
+    //Saving data when app has been Destroyed
     @Override
     protected void onDestroy() {
         super.onDestroy();

@@ -37,6 +37,7 @@ public class Tips extends AppCompatActivity {
         info.setText(R.string.station1);
         which_station = findViewById(R.id.which_station);
         which_station.setText(R.string.opera__hause);
+        //Making new Thread to wait for 2 sec
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -47,6 +48,7 @@ public class Tips extends AppCompatActivity {
 
 
     }
+    //Waiting for Thread
     synchronized void wt() {
         try {
             Thread.sleep(2000);
@@ -55,6 +57,7 @@ public class Tips extends AppCompatActivity {
         }
 
     }
+    //Going to first activity
     synchronized void close() {
         Intent intent = new Intent(Tips.this, Station_1.class);
         if (Tools.STUDY == false)
@@ -63,6 +66,7 @@ public class Tips extends AppCompatActivity {
 
         finish();
     }
+    //Checking on Back button pressing
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Tips.this, MainActivity.class);

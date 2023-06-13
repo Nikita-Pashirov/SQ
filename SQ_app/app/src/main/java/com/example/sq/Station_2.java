@@ -38,6 +38,7 @@ public class Station_2 extends AppCompatActivity {
             }
         });
     }
+    //Checking on Back button pressing
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Station_2.this, MainActivity.class);

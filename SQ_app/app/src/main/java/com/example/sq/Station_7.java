@@ -34,12 +34,14 @@ public class Station_7 extends AppCompatActivity {
             }
         });
     }
+    //Checking on Go button pressing
     public void onBtnClick(View v) {
         Intent intent = new Intent(Station_7.this, Final_task.class);
         intent.putExtra("task", 1);
         startActivity(intent);
         finish();
     }
+    //Checking on Back button pressing
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Station_7.this, MainActivity.class);

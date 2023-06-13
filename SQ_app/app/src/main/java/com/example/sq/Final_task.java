@@ -22,6 +22,7 @@ public class Final_task extends AppCompatActivity {
         task_text = findViewById(R.id.task_text);
 
         int which_task = getIntent().getIntExtra("task", 1);
+        //Switch_case with tasks
         switch (which_task) {
             case 3:
                 task_text.setText(R.string.task11);
@@ -312,12 +313,14 @@ public class Final_task extends AppCompatActivity {
         };
 
     }
+    //Checking on Ans button pressing
     public void onAnsClick(View v) {
         if (ans1.getId() == v.getId())
             correctPressed();
         else
             uncorrectPressed();
     }
+    //Checking on Back button pressing
     @Override
     public void onBackPressed() {
         int which_task = getIntent().getIntExtra("task", 1);
@@ -328,6 +331,7 @@ public class Final_task extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    //Calculate helping variables
     void colculateState () {
         int which_task = getIntent().getIntExtra("task", 1);
         if (Tools.TASKS[which_task] == false) {
@@ -338,6 +342,7 @@ public class Final_task extends AppCompatActivity {
         }
 
     }
+    //Checking if uncorrect ans pressed
     void uncorrectPressed() {
         Toast.makeText(this, "К сожалению Вы ответили неправильно.", Toast.LENGTH_SHORT).show();
         int which_task = getIntent().getIntExtra("task", 1);
@@ -348,6 +353,7 @@ public class Final_task extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+    //Checking if correct ans pressed
     void correctPressed() {
         Toast.makeText(this, "Поздравляю! Вы дали верный ответ!", Toast.LENGTH_SHORT).show();
         colculateState();

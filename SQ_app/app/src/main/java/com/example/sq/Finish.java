@@ -36,6 +36,7 @@ public class Finish extends AppCompatActivity {
             }
         });
     }
+    //Checking on Back button pressing
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(Finish.this, Finish.class);
